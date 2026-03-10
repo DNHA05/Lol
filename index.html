@@ -430,7 +430,7 @@
             
             try {
                 const response = await fetch(`http://api.harblx.online:31329/v1/bypass?url=${encodeURIComponent(targetUrl)}`, {
-                    headers: { "x-api-key": getK=() }
+                    headers: { "x-api-key": getK() }
                 });
                 const data = await response.json();
                 
@@ -473,6 +473,7 @@
 </body>
 
 </html>
+
 
 
 
