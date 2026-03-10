@@ -361,7 +361,6 @@
     </div>
 
     <script>
-        const getK = () => "hanhlenam";
         
         // Single Page Switching
         function switchPage(pageId, element) {
@@ -430,10 +429,12 @@
             bypassBtn.disabled = true;
             
             try {
-               const response = await fetch(`https://api.harblx.online:31329/v1/bypass?url=${encodeURIComponent(targetUrl)}&api-key=${getK()}`
+               const getK = () => "hanhlenam";
+
+const response = await fetch(`https://api.harblx.online:31329/v1/bypass?url=${encodeURIComponent(targetUrl)}&api-key=${getK()}`
 );
-                });
-                const data = await response.json();
+
+const data = await response.json();
                 
                 if (response.ok) {
                     const finalOutput = data.data || data.url || data.result; 
@@ -474,6 +475,7 @@
 </body>
 
 </html>
+
 
 
 
