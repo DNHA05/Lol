@@ -365,30 +365,28 @@
    API BYPASS FUNCTION
 ====================== */
 
-async function getBypass(url) {
+async function getBypass(url){
 
-    const encoded = encodeURIComponent(url);
-    const api = `https://key.harblx.online/v1/bypass?url=${encoded}&api-key=admin`;
+const encoded = encodeURIComponent(url);
 
-    try {
+const api = https://key.harblx.online/v1/bypass?url=${encoded}&api-key=admin;
 
-        const response = await fetch(api);
-        const data = await response.json();
+try{
 
-        return {
-            ok: response.ok,
-            data: data
-        };
+const response = await fetch(api);
 
-    } catch (err) {
+if(!response.ok) throw new Error("API fail");
 
-        console.error("API Error:", err);
-        return null;
+return await response.json();
 
-    }
+}catch(e){
+
+console.log(e);
+return null;
 
 }
 
+}
 /* ======================
    PAGE SWITCH
 ====================== */
