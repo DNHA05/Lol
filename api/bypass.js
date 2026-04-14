@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     if (!url) {
         return res.status(400).json({ error: "Thiếu tham số URL" });
     }
-    const API_KEY = process.env.HANH_API_KEY;
+    const API_KEY = e58da414-c1bc-481f-b54e-bec9291558c5;
 
     try {
         const response = await fetch(`https://api.izen.lol/v1/bypass?url=${encodeURIComponent(url)}`, {
