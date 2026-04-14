@@ -369,7 +369,7 @@ async function getBypass(url){
 
 const encoded = encodeURIComponent(url);
 
-const api = `http://api.harblx.online:31329/v1/bypass?url=${encoded}&api-key=admin`;
+const api = `http://api.harblx.online:31329/v1/bypass?url=${encoded}&api-key=f795e77637a5fbaedbd84e05442f0e1d`;
 
 try{
 
@@ -522,10 +522,7 @@ bypassBtn.addEventListener('click', async () => {
 
     if (result.ok) {
 
-        const finalOutput =
-            result.data.data ||
-            result.data.url ||
-            result.data.result;
+        const finalOutput = result.result || result.data || result.url; 
 
         if (finalOutput) {
 
