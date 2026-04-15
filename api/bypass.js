@@ -1,4 +1,4 @@
-<script>
+
         const _v = "ZTU4ZGE0MTQtYzFiYy00ODFmLWI1NGUtYmVjOTI5MTU1OGM1";
         const getK = () => atob(_v);
         
@@ -110,4 +110,3 @@
             btnElement.innerText = 'ĐÃ SAO CHÉP!';
             setTimeout(() => btnElement.innerText = old, 2000);
         }
-    </script>
