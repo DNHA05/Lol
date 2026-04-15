@@ -9,4 +9,3 @@ Hệ thống API chuyên dụng để xử lý các liên kết rút gọn.
 - Bypass Key: https://harbx.online/Bypass
 ## Tác giả
 - Creator: **_harblx**.
-- 
