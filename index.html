@@ -1,280 +1,176 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Hanh lẻ Năm</title>
-  <link rel="icon" type="image/png" href="HanhImages/Hanh.png">
-  <meta name="description" content="Web Hanh lẻ Năm Hỗ Trợ Bypass Delta, Linkvertise, Lootlabs, ... Và Còn Nhiều Thứ Khác, Bypass Siêu Nhanh An Toàn Uy Tín!">
+    <meta charset="UTF-8">
+    <title>Hanh lẻ Năm</title>
+    <link rel="icon" type="image/png" href="HanhImages/Hanh.png">
+    <meta name="description" content="Web Hanh lẻ Năm Hỗ Trợ Bypass Delta, Linkvertise, Lootlabs, ... Và Còn Nhiều Thứ Khác, Bypass Siêu Nhanh An Toàn Uy Tín!">
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Hanh Lẻ Năm">
-  <meta property="og:description" content="Web Hanh lẻ Năm Hỗ Trợ Bypass Delta, Linkvertise, Lootlabs, ... Và Còn Nhiều Thứ Khác, Bypass Siêu Nhanh An Toàn Uy Tín!">
-  <meta property="og:url" content="https://harblx.online/">
-  <meta property="og:image" content="https://harblx.online/HanhImages/Hanh.png">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hanh Lẻ Năm">
+    <meta property="og:description" content="Web Hanh lẻ Năm Hỗ Trợ Bypass Delta, Linkvertise, Lootlabs, ... Và Còn Nhiều Thứ Khác, Bypass Siêu Nhanh An Toàn Uy Tín!">
+    <meta property="og:url" content="https://harblx.online/">
+    <meta property="og:image" content="https://harblx.online/HanhImages/Hanh.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Hanh Lẻ Năm">
-  <meta name="twitter:description" content="Web Hanh lẻ Năm Hỗ Trợ Bypass Delta, Linkvertise, Lootlabs, ... Và Còn Nhiều Thứ Khác, Bypass Siêu Nhanh An Toàn Uy Tín!">
-  <meta name="twitter:image" content="https://harblx.online/HanhImages/Hanh.png">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
 
-```
-    :root {
-        --primary: #8b5cf6;
-        --secondary: #d946ef;
-    }
+        :root {
+            --primary: #8b5cf6;
+            --secondary: #d946ef;
+        }
 
-    body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        background: #050505;
-        color: #ffffff;
-        margin: 0;
-        overflow: hidden;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #050505;
+            color: #ffffff;
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-    #universe-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-    }
+        #universe-container {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+        }
 
-    .star {
-        position: absolute;
-        background: white;
-        border-radius: 50%;
-        opacity: 0.5;
-        animation: twinkle var(--duration) infinite ease-in-out;
-    }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
 
-    @keyframes twinkle {
-        0%, 100% { opacity: 0.3; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.2); }
-    }
-    .nav-menu {
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 10px 25px;
-        border-radius: 100px;
-        display: flex;
-        gap: 20px;
-        z-index: 100;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
 
-    .nav-item {
-        font-size: 10px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: rgba(255, 255, 255, 0.4);
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        cursor: pointer;
-        text-decoration: none;
-    }
+        .nav-menu {
+            position: fixed;
+            top: 20px; left: 50%; transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px 25px;
+            border-radius: 100px;
+            display: flex; gap: 20px; z-index: 100;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
 
-    .nav-item:hover, .nav-item.active {
-        color: #c084fc;
-        text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
-    }
-    .neon-luxury-title {
-        font-size: 2.25rem;
-        font-weight: 800;
-        letter-spacing: -0.05em;
-        background: linear-gradient(90deg, #fff, #c084fc, #ff4ecd, #c084fc, #fff);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: luxury-sweep 4s linear infinite;
-    }
+        .nav-item {
+            font-size: 10px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease; display: flex; align-items: center; gap: 6px;
+            cursor: pointer; text-decoration: none;
+        }
 
-    @keyframes luxury-sweep {
-        0% { background-position: 0% center; }
-        100% { background-position: 200% center; }
-    }
-    .main-card {
-        background: rgba(10, 10, 15, 0.8);
-        backdrop-filter: blur(30px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-        width: 95%;
-        max-width: 500px;
-        border-radius: 40px;
-        padding: 40px;
-        z-index: 10;
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        max-height: 85vh;
-        overflow-y: auto;
-    }
-    .main-card::-webkit-scrollbar { width: 4px; }
-    .main-card::-webkit-scrollbar-track { background: transparent; }
-    .main-card::-webkit-scrollbar-thumb { background: rgba(139, 92, 246, 0.3); border-radius: 10px; }
+        .nav-item:hover, .nav-item.active {
+            color: #c084fc;
+            text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+        }
 
-    .page-content {
-        display: none;
-        animation: fadeSlide 0.5s ease forwards;
-    }
+        .neon-luxury-title {
+            font-size: 2.25rem; font-weight: 800; letter-spacing: -0.05em;
+            background: linear-gradient(90deg, #fff, #c084fc, #ff4ecd, #c084fc, #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            animation: luxury-sweep 4s linear infinite;
+        }
 
-    .page-content.active {
-        display: block;
-    }
+        @keyframes luxury-sweep {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
 
-    @keyframes fadeSlide {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+        .main-card {
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            width: 95%; max-width: 500px;
+            border-radius: 40px; padding: 40px; z-index: 10;
+            max-height: 85vh; overflow-y: auto;
+        }
 
-    .input-box {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        transition: all 0.4s ease;
-    }
+        .page-content { display: none; animation: fadeSlide 0.5s ease forwards; }
+        .page-content.active { display: block; }
 
-    .btn-gradient {
-        background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    .btn-gradient:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
-    }
+        .input-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
-    #clearBtn { opacity: 0; pointer-events: none; transition: 0.2s; }
-    #clearBtn.visible { opacity: 1; pointer-events: auto; }
+        .btn-gradient {
+            background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
 
-    .support-section {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    .support-header {
-        font-size: 14px;
-        font-weight: 800;
-        color: white;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        padding-bottom: 10px;
-    }
-    .support-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-    }
-    .support-item {
-        font-size: 11px;
-        color: rgba(255, 255, 255, 0.6);
-        padding: 8px 12px;
-        background: rgba(255, 255, 255, 0.03);
-        border-radius: 10px;
-        border: 1px solid transparent;
-        transition: all 0.2s;
-    }
-    .support-item:hover {
-        color: #c084fc;
-        background: rgba(192, 132, 252, 0.05);
-        border-color: rgba(192, 132, 252, 0.2);
-    }
+        .support-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px; padding: 20px; margin-bottom: 20px;
+        }
 
-    .footer-link {
-        color: #64748b;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    .footer-link:hover {
-        color: #c084fc;
-    }
+        .support-item {
+            font-size: 11px; color: rgba(255, 255, 255, 0.6);
+            padding: 8px 12px; background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
 
-    /* Visitor Counter */
-    .visitor-counter {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 10px;
-    }
-    .visitor-counter i {
-        color: #8b5cf6;
-        font-size: 10px;
-    }
-    .visitor-counter span {
-        font-size: 9px;
-        color: rgba(255,255,255,0.35);
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-    }
-    .visitor-counter .count-num {
-        color: #c084fc;
-    }
-</style>
-```
+        .visitor-counter {
+            display: flex; align-items: center; justify-content: center;
+            gap: 8px; margin-top: 10px;
+        }
+        .visitor-counter i { color: #8b5cf6; font-size: 10px; }
+        .visitor-counter span {
+            font-size: 9px; color: rgba(255,255,255,0.35);
+            font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+        }
+        .count-num { color: #c084fc; }
 
+        #clearBtn { opacity: 0; pointer-events: none; transition: 0.2s; }
+        #clearBtn.visible { opacity: 1; pointer-events: auto; }
+    </style>
 </head>
 <body>
 
-```
 <div id="universe-container"></div>
 
-<!-- Navigation Menu -->
 <nav class="nav-menu">
     <div class="nav-item active" onclick="switchPage('home', this)">
-        <i class="fa-solid fa-house"></i>
-        <span>Home</span>
+        <i class="fa-solid fa-house"></i><span>Home</span>
     </div>
     <div class="nav-item" onclick="switchPage('support', this)">
-        <i class="fa-solid fa-circle-question"></i>
-        <span>Hỗ trợ Bypass</span>
+        <i class="fa-solid fa-circle-question"></i><span>Hỗ trợ</span>
     </div>
     <div class="w-[1px] h-3 bg-white/10 my-auto"></div>
     <a href="https://harblx.online/discord" target="_blank" class="nav-item">
-        <i class="fa-brands fa-discord text-[#5865F2]"></i>
-        <span>Discord</span>
-    </a>
-    <a href="https://guns.lol/_harblx" target="_blank" class="nav-item">
-        <i class="fa-solid fa-bolt"></i>
-        <span>Link Bio</span>
+        <i class="fa-brands fa-discord text-[#5865F2]"></i><span>Discord</span>
     </a>
 </nav>
 
 <div class="main-card">
-    <!-- PAGE: HOME (BYPASS) -->
-   <div id="page-home" class="page-content active">
+    <div id="page-home" class="page-content active">
         <div class="text-center mb-8">
-            <div class="inline-block p-4">
-                <img src="HanhImages/hanh.GIF" class="w-12 mx-auto">
-            </div>
+            <div class="inline-block p-4"><img src="HanhImages/hanh.GIF" class="w-12 mx-auto"></div>
             <h1 class="neon-luxury-title">Hanh lẻ Năm</h1>
-            <p class="text-slate-500 text-[10px] uppercase tracking-[0.2em] mt-2 font-bold">Bypass Linkvertise, Delta, Lootlabs, ...</p>
+            <p class="text-slate-500 text-[10px] uppercase tracking-[0.2em] mt-2 font-bold">Bypass Linkvertise, Delta, Lootlabs...</p>
         </div>
 
         <div class="space-y-5">
@@ -298,166 +194,104 @@
             </div>
 
             <div id="resultBox" class="hidden bg-violet-500/5 border border-violet-500/20 rounded-2xl p-5">
-                <p class="text-[9px] font-black text-violet-400 text-center mb-3 tracking-widest uppercase">KẾT QUẢ GIẢI MÃ</p>
+                <p class="text-[9px] font-black text-violet-400 text-center mb-3 tracking-widest uppercase">KẾT QUẢ</p>
                 <div id="resultLink" class="p-3 bg-black/40 rounded-xl text-violet-200 font-mono text-[10px] break-all text-center border border-white/5 mb-4 min-h-[40px] flex items-center justify-center">...</div>
                 <div id="actionArea">
-                    <a id="openBtn" href="#" target="_blank" class="hidden w-full text-center py-3 btn-gradient text-white rounded-xl text-[10px] font-black tracking-widest">TRUY CẬP NGAY</a>
-                    <button id="bigCopyBtn" onclick="copyToClipboard(document.getElementById('resultLink').innerText, this)" class="hidden w-full text-center py-3 btn-gradient text-white rounded-xl text-[10px] font-black tracking-widest">SAO CHÉP VĂN BẢN</button>
+                    <a id="openBtn" href="#" target="_blank" class="hidden w-full text-center py-3 btn-gradient text-white rounded-xl text-[10px] font-black tracking-widest mb-2">TRUY CẬP NGAY</a>
+                    <button id="bigCopyBtn" onclick="copyToClipboard(document.getElementById('resultLink').innerText, this)" class="hidden w-full text-center py-3 border border-white/10 text-white rounded-xl text-[10px] font-black tracking-widest">SAO CHÉP</button>
                 </div>
             </div>
-
-            <div id="status-message" class="hidden text-center text-[9px] py-3 rounded-xl font-black tracking-widest uppercase border border-white/5"></div>
         </div>
     </div>
 
-    <!-- PAGE: SUPPORT LIST -->
     <div id="page-support" class="page-content">
-        <div class="text-center mb-8">
-            <h2 class="text-xl font-black text-white uppercase tracking-tighter">Hỗ Trợ Bypass</h2>
-            <p class="text-slate-500 text-[10px] mt-1 uppercase tracking-widest font-bold">Service Capability List</p>
+        <div class="text-center mb-6">
+            <h2 class="text-lg font-black uppercase tracking-widest">Danh sách hỗ trợ</h2>
         </div>
-
-        <!-- Key System Section -->
         <div class="support-section">
-            <div class="support-header">
-                <i class="fa-solid fa-key text-violet-400"></i>
-                <span>Key System</span>
-            </div>
-            <div class="support-list">
-                <div class="support-item">Platoboost</div>
-                <div class="support-item">Pandadevelopment</div>
-                <div class="support-item">Trigon</div>
-                <div class="support-item">Violated</div>
-                <div class="support-item">Blox-script</div>
-                <div class="support-item">Hydrogen</div>
-                <div class="support-item">Codex</div>
-            </div>
-        </div>
-
-        <!-- Ad-Link Section -->
-        <div class="support-section">
-            <div class="support-header">
-                <i class="fa-solid fa-rectangle-ad text-violet-400"></i>
-                <span>Ad-Link</span>
-            </div>
-            <div class="support-list">
+            <div class="grid grid-cols-2 gap-2">
                 <div class="support-item">Linkvertise</div>
-                <div class="support-item">Admaven</div>
-                <div class="support-item">Workink</div>
-                <div class="support-item">Fly.inc</div>
-                <div class="support-item">Shrtfly</div>
-                <div class="support-item">Lockrso</div>
-                <div class="support-item">Linkunlocker</div>
-                <div class="support-item">Link-unlock</div>
-                <div class="support-item">Arolinks</div>
+                <div class="support-item">Delta Executor</div>
+                <div class="support-item">Lootlabs</div>
+                <div class="support-item">Codex</div>
+                <div class="support-item">Hydrogen</div>
+                <div class="support-item">Pandadevel</div>
             </div>
         </div>
-
-        <!-- Paste Section -->
-        <div class="support-section">
-            <div class="support-header">
-                <i class="fa-solid fa-paste text-violet-400"></i>
-                <span>Paste</span>
-            </div>
-            <div class="support-list">
-                <div class="support-item">Pastebin</div>
-                <div class="support-item">Paste-Drop</div>
-                <div class="support-item">Pastefy</div>
-                <div class="support-item">Pasterso</div>
-            </div>
-        </div>
-
-        <button onclick="switchPage('home', document.querySelector('.nav-item'))" class="w-full mt-4 py-3 border border-white/10 rounded-xl text-[10px] font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Quay lại trang chủ</button>
+        <button onclick="switchPage('home', document.querySelector('.nav-item'))" class="w-full py-3 border border-white/10 rounded-xl text-[10px] font-bold text-slate-400 uppercase tracking-widest">Quay lại</button>
     </div>
 
-    <!-- FOOTER -->
     <div class="mt-8 pt-6 border-t border-white/5 text-center">
-        <p class="text-[8px] text-slate-700 uppercase tracking-[0.4em] font-bold mb-3">
-            <a href="https://harblx.online/" target="_blank" class="footer-link">© HanhLeNam - 2026</a>
-        </p>
-        <!-- Visitor Counter -->
+        <p class="text-[8px] text-slate-700 uppercase tracking-[0.4em] font-bold mb-3">© HanhLeNam - 2026</p>
         <div class="visitor-counter">
             <i class="fa-solid fa-eye"></i>
-            <span>Lượt xem: <span class="count-num" id="visitorBadge">...</span></span>
+            <span>Lượt xem: <span class="count-num" id="view-count-display">--</span></span>
         </div>
-        <!-- Badge ẩn để kích hoạt đếm hits.seeyoufarm.com -->
-        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fharblx.online&count_bg=%238B5CF6&title_bg=%23111111&icon=eye.svg&icon_color=%23FFFFFF&title=Views&edge_flat=true" 
-             id="hitsBadge"
-             style="display:none;" 
-             onload="parseHitsCount(this)"
-             onerror="document.getElementById('visitorBadge').textContent='--'">
     </div>
 </div>
 
 <script src="api/bypass.js"></script>
 
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getDatabase, ref, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyCkAy-W-cQdRcSAhaEwf2SknsB5K4vBMTw",
+        authDomain: "harblx-e3e8e.firebaseapp.com",
+        projectId: "harblx-e3e8e",
+        storageBucket: "harblx-e3e8e.firebasestorage.app",
+        messagingSenderId: "942699698919",
+        appId: "1:942699698919:web:931426388fb82f9b082042",
+        databaseURL: "https://harblx-e3e8e-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const viewRef = ref(db, 'total_views');
+
+    // Tăng view mỗi khi load trang
+    runTransaction(viewRef, (current) => (current || 0) + 1);
+
+    // Hiển thị view real-time
+    onValue(viewRef, (snapshot) => {
+        const count = snapshot.val();
+        document.getElementById('view-count-display').innerText = count ? count.toLocaleString() : '0';
+    });
+</script>
+
 <script>
-    // ── Star background ──────────────────────────────────────────
+    // Background stars
     const container = document.getElementById('universe-container');
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 120; i++) {
         const star = document.createElement('div');
-        star.classList.add('star');
-        const size = Math.random() * 2.5 + 0.5;
-        star.style.cssText = `
-            width:${size}px; height:${size}px;
-            top:${Math.random()*100}%; left:${Math.random()*100}%;
-            --duration:${Math.random()*3+2}s;
-            animation-delay:${Math.random()*3}s;
-        `;
+        star.className = 'star';
+        const size = Math.random() * 2;
+        star.style.cssText = `width:${size}px; height:${size}px; top:${Math.random()*100}%; left:${Math.random()*100}%; --duration:${Math.random()*3+2}s; animation-delay:${Math.random()*2}s;`;
         container.appendChild(star);
     }
 
-    // ── Page switching ───────────────────────────────────────────
-    function switchPage(pageId, clickedEl) {
+    // Switch Page
+    function switchPage(pageId, el) {
         document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
         document.getElementById('page-' + pageId).classList.add('active');
         document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-        if (clickedEl) clickedEl.classList.add('active');
+        if(el) el.classList.add('active');
     }
 
-    // ── Clear button ─────────────────────────────────────────────
+    // Input Helpers
     const urlInput = document.getElementById('urlInput');
     const clearBtn = document.getElementById('clearBtn');
-    urlInput.addEventListener('input', () => {
-        clearBtn.classList.toggle('visible', urlInput.value.length > 0);
-    });
-    clearBtn.addEventListener('click', () => {
-        urlInput.value = '';
-        clearBtn.classList.remove('visible');
-        urlInput.focus();
-    });
+    urlInput.oninput = () => clearBtn.classList.toggle('visible', urlInput.value.length > 0);
+    clearBtn.onclick = () => { urlInput.value = ''; clearBtn.classList.remove('visible'); urlInput.focus(); };
 
-    // ── Copy helper ──────────────────────────────────────────────
     function copyToClipboard(text, btn) {
         navigator.clipboard.writeText(text).then(() => {
-            const orig = btn.textContent;
-            btn.textContent = '✓ ĐÃ SAO CHÉP';
-            setTimeout(() => btn.textContent = orig, 2000);
+            const old = btn.innerText;
+            btn.innerText = '✓ ĐÃ COPY';
+            setTimeout(() => btn.innerText = old, 2000);
         });
     }
-
-    // ── Visitor counter ──────────────────────────────────────────
-    function parseHitsCount(img) {
-        // Sau khi badge load, fetch text count từ API
-        fetch('https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fharblx.online')
-            .then(r => r.text())
-            .then(svg => {
-                // Lấy số từ SVG (số cuối cùng trong thẻ <text>)
-                const matches = svg.match(/>(\d[\d,]*)</g);
-                if (matches && matches.length >= 2) {
-                    const total = matches[matches.length - 1].replace(/[><,]/g, '');
-                    document.getElementById('visitorBadge').textContent = Number(total).toLocaleString();
-                } else {
-                    document.getElementById('visitorBadge').textContent = '--';
-                }
-            })
-            .catch(() => {
-                document.getElementById('visitorBadge').textContent = '--';
-            });
-    window.addEventListener('load', () => {
-        const badge = document.getElementById('hitsBadge');
-        badge.src = badge.src;
-    });
 </script>
 
 </body>
