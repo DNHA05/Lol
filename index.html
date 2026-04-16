@@ -249,40 +249,20 @@
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
     const viewRef = ref(db, 'total_views');
-    runTransaction(viewRef, (current) => (current || 0) + 1);
+
+
+    runTransaction(viewRef, (current) => {
+        return (current || 0) + 1;
+    });
+
     onValue(viewRef, (snapshot) => {
         const count = snapshot.val();
-        document.getElementById('view-count-display').innerText = count ? count.toLocaleString() : '0';
+        const display = document.getElementById('view-count-display');
+        if (display) {
+            display.innerText = count ? count.toLocaleString() : '0';
+        }
     });
 </script>
-<script>
-    const container = document.getElementById('universe-container');
-    for (let i = 0; i < 120; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        const size = Math.random() * 2;
-        star.style.cssText = `width:${size}px; height:${size}px; top:${Math.random()*100}%; left:${Math.random()*100}%; --duration:${Math.random()*3+2}s; animation-delay:${Math.random()*2}s;`;
-        container.appendChild(star);
-    }
 
-    function switchPage(pageId, el) {
-        document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
-        document.getElementById('page-' + pageId).classList.add('active');
-        document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-        if(el) el.classList.add('active');
-    }
-    const urlInput = document.getElementById('urlInput');
-    const clearBtn = document.getElementById('clearBtn');
-    urlInput.oninput = () => clearBtn.classList.toggle('visible', urlInput.value.length > 0);
-    clearBtn.onclick = () => { urlInput.value = ''; clearBtn.classList.remove('visible'); urlInput.focus(); };
-
-    function copyToClipboard(text, btn) {
-        navigator.clipboard.writeText(text).then(() => {
-            const old = btn.innerText;
-            btn.innerText = '✓ ĐÃ COPY';
-            setTimeout(() => btn.innerText = old, 2000);
-        });
-    }
-</script>
 </body>
 </html>
