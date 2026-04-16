@@ -249,19 +249,13 @@
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
     const viewRef = ref(db, 'total_views');
-
-    // Tăng view mỗi khi load trang
     runTransaction(viewRef, (current) => (current || 0) + 1);
-
-    // Hiển thị view real-time
     onValue(viewRef, (snapshot) => {
         const count = snapshot.val();
         document.getElementById('view-count-display').innerText = count ? count.toLocaleString() : '0';
     });
 </script>
-
 <script>
-    // Background stars
     const container = document.getElementById('universe-container');
     for (let i = 0; i < 120; i++) {
         const star = document.createElement('div');
@@ -271,15 +265,12 @@
         container.appendChild(star);
     }
 
-    // Switch Page
     function switchPage(pageId, el) {
         document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
         document.getElementById('page-' + pageId).classList.add('active');
         document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
         if(el) el.classList.add('active');
     }
-
-    // Input Helpers
     const urlInput = document.getElementById('urlInput');
     const clearBtn = document.getElementById('clearBtn');
     urlInput.oninput = () => clearBtn.classList.toggle('visible', urlInput.value.length > 0);
@@ -293,6 +284,5 @@
         });
     }
 </script>
-
 </body>
 </html>
